@@ -1,0 +1,23 @@
+plt.figure(figsize=(8,5))
+
+plt.hist(df['Umur'], bins=10)
+
+plt.title('Distribusi Umur Mahasiswa')
+plt.xlabel('Umur')
+plt.ylabel('Jumlah Mahasiswa')
+
+plt.show()
+jumlah_prodi = df['Prodi'].value_counts()
+
+plt.figure(figsize=(10,6))
+
+jumlah_prodi.plot(kind='bar')
+
+plt.title('Jumlah Mahasiswa Berdasarkan Program Studi')
+plt.xlabel('Program Studi')
+plt.ylabel('Jumlah Mahasiswa')
+
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+plt.show()
